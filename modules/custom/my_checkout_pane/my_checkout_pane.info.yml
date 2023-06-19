@@ -1,0 +1,5 @@
+name: My Checkout Pane
+type: module
+description: Defines custom checkout panes.
+core: 8.x
+package: Custom

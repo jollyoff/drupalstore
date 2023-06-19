@@ -1,0 +1,27 @@
+name: 'Custom Promotion Offer'
+type: module
+description: 'Custom module with a Promotion Plugin.'
+package: 'Custom'
+core_version_requirement: ^8 || ^9
+dependencies:
+  - commerce_promotion:commerce_promotion
+
+module:
+  version: 1.0
+  schema_version: 8000
+
+# Включение файлов
+files:
+  - 'src/Plugin/Commerce/PromotionOffer/CustomPromotionOffer.php'
+
+# Регистрация плагина
+commerce_plugin:
+  promotion_offer:
+    plugins:
+      my_custom_promotion_offer:
+        id: my_custom_promotion_offer
+        label: 'Custom Promotion Offer'
+        provider: my_promotion_offer
+        class: Drupal\my_promotion_offer\Plugin\Commerce\PromotionOffer\CustomPromotionOffer
+        description: 'Provides a custom promotion offer.'
+        entity_type: commerce_order

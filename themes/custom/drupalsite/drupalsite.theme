@@ -1,0 +1,7 @@
+<?php
+
+function drupalsite_preprocess_front_page(&$variables) {
+  if ($variables['is_front']) {
+    $variables['#attached']['library'][] = 'drupalsite/page-front';
+  }
+}

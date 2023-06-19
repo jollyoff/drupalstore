@@ -1,0 +1,100 @@
+@import "variables";
+
+.block-system-main-block{
+  width: 100%;
+}
+.swiper{
+  width: 100%;
+  height: 500px;
+}
+.swiper-slide{
+  text-align: center;
+  font-size: 18px;
+  background-color: #000000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.swiper-slide img{
+  width: 58%;
+  object-fit: cover;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
+  right: 140px !important;
+  left: auto;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+  left: 140px !important;
+  right: auto;
+}
+.view-products{
+  .views-row{
+    display: flex;
+    justify-content: space-between;
+    > div{
+      .product-variations{
+        h3{
+          display: none;
+        }
+        ul{
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          li{
+            display: inline-block;
+          }
+          & > li:not(:last-child){
+            margin-right: 10px;
+          }
+        }
+      }
+      margin: 0.5rem;
+      width: 20%;
+      > article{
+        .commerce-order-item-add-to-cart-form{
+          .form-wrapper{
+            input{
+              width: 168px
+            }
+            .form-required{
+              display: none;
+            }
+          }
+          .field__items{
+            .form-required{
+              display: none;
+            }
+          }
+        }
+        .field__item{
+          font-size: 1.8rem;
+          color: #000000;
+          .form-wrapper{
+            .form-submit{
+              background-color: $grey;
+              color: $black;
+              border: none;
+              border-radius: 5px;
+              padding: 10px 20px;
+              font-size: 14px;
+              text-align: center;
+              text-decoration: none;
+              cursor: pointer;
+              transition: background-color 0.3s;
+            }
+            .form-submit:hover{
+              background-color: #d4d4d4;
+            }
+          }
+          a{
+            color: black;
+            transition: background-color 0.3s;
+          }
+          a:hover{
+            color: grey;
+          }
+        }
+      }
+    }
+  }
+}

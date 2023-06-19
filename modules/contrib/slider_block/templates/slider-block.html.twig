@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Theme implementation for slider-block
+ *
+ * Available variables:
+ * - slider_name: slider name.
+ * - subtitle: slider short details.
+ * - image_url: slider image url.
+ */
+#}
+<div class="slick-carousel">
+	{% for image in image_url %}
+	  	<div>
+	  		<div class="slide-content"><img src="{{ image }}"></div>
+	  </div>
+	{% endfor %}
+</div>
+<div class="slider-description">
+	<div class="slider-detail">
+		<h2>{{ slider_name }}</h2>
+		<p>{{ subtitle }}</p>
+	</div>
+</div>

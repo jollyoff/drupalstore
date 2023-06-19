@@ -1,0 +1,94 @@
+@charset "UTF-8";
+.block-views-blocksimilar-products-block-1 div .item-list ul {
+  width: 20%;
+  float: right;
+  list-style: none; }
+
+article .product-variations {
+  margin-left: 10px; }
+  article .product-variations h3 {
+    display: none; }
+  article .product-variations ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    article .product-variations ul li {
+      display: inline-block; }
+      article .product-variations ul li a {
+        color: black;
+        transition: background-color 0.3s; }
+      article .product-variations ul li a:hover {
+        color: grey; }
+    article .product-variations ul > li:not(:last-child) {
+      margin-right: 10px; }
+
+article .product--rendered-attribute .form-item {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 2px; }
+
+article .product--rendered-attribute label.option {
+  display: inline-block; }
+
+article .product--rendered-attribute .form-radio {
+  display: none; }
+
+article .product--rendered-attribute__selected ~ label.option {
+  border: 1px solid; }
+
+article > div {
+  margin-bottom: 10px; }
+
+article .variations .js-form-item-purchased-entity-0-target-id .form-required {
+  display: none; }
+
+article .variations .js-form-item-quantity-0-value label {
+  display: none; }
+
+article .commerce-price .field__label {
+  display: none; }
+
+article .commerce-price .field__item {
+  font-size: 18px; }
+
+article .product--variation-field--variation_price__3 .field__item {
+  position: relative;
+  display: inline-block;
+  text-decoration: line-through; }
+
+article .product--variation-field--variation_price__3 .field__item:after {
+  content: "399 ₴";
+  position: absolute;
+  display: contents;
+  color: #c41e3a; }
+
+article .field-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+article .text-with-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5px; }
+
+article .field-category {
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  text-transform: capitalize; }
+  article .field-category a {
+    color: #000000;
+    transition: background-color 0.3s; }
+  article .field-category a:hover {
+    color: #c4c4c4; }
+  article .field-category > div:not(:last-child) {
+    margin-right: 1rem;
+    position: relative; }
+    article .field-category > div:not(:last-child):before {
+      position: absolute;
+      content: ',';
+      right: -4px;
+      bottom: 0; }

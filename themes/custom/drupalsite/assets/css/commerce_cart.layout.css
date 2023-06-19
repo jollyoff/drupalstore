@@ -1,0 +1,42 @@
+main .block-system-main-block .cart-form {
+  background-color: #d8d8d8;
+  padding: 50px;
+  display: block; }
+  main .block-system-main-block .cart-form form .form-wrapper {
+    margin-top: 5px; }
+    main .block-system-main-block .cart-form form .form-wrapper .form-submit {
+      color: #000000;
+      font-size: 14px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease; }
+    main .block-system-main-block .cart-form form .form-wrapper .form-submit:hover {
+      background-color: #45A049; }
+  main .block-system-main-block .cart-form form div .order-total-line__subtotal {
+    display: none; }
+  main .block-system-main-block .cart-form form table thead tr > th {
+    text-transform: uppercase; }
+  main .block-system-main-block .cart-form form table tbody .views-field-remove-button .form-submit {
+    color: #000000;
+    font-size: 12px;
+    padding: 5px 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s; }
+  main .block-system-main-block .cart-form form table tbody .views-field-remove-button .form-submit:hover {
+    background-color: #a51b00;
+    color: #ffffff; }
+  main .block-system-main-block .cart-form form table tbody .views-field-edit-quantity .form-no-label input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: background-color 0.3s; }
+  main .block-system-main-block .cart-form form table tbody .views-field-edit-quantity .form-no-label input:hover {
+    background-color: #f0f0f0; }
+  main .block-system-main-block .cart-form form table tbody .views-field-edit-quantity .form-no-label input::-webkit-inner-spin-button::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }

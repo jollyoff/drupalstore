@@ -1,0 +1,10 @@
+slider-data:
+  css:
+    component:
+      css/style.css: {}
+  js:
+    js/block-slider.js: {}
+    js/slick.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

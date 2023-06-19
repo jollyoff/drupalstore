@@ -1,0 +1,28 @@
+<div class="page">
+  {{ attach_library('drupalsite/page-front') }}
+  {{ page.header }}
+  {{ page.breadcrumb }}
+  {{ page.highlighted }}
+  {{ page.help }}
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="themes/custom/drupalsite/assets/images/sweatshirts-428607_1280.jpg" alt="123"></div>
+      <div class="swiper-slide"><img src="themes/custom/drupalsite/assets/images/istockphoto-1338894509-2048x2048.jpg" alt="123"></div>
+      <div class="swiper-slide"><img src="themes/custom/drupalsite/assets/images/istockphoto-1369227756-2048x2048.jpg" alt="123"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  {{ page.content }}
+  <main>
+
+  </main>
+  {{ page.footer }}
+</div>

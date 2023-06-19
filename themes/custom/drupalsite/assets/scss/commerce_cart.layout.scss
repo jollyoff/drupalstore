@@ -1,0 +1,78 @@
+@import "variables";
+
+main{
+  .block-system-main-block{
+    .cart-form{
+      background-color: #d8d8d8;
+      padding: 50px;
+      display: block;
+      form{
+        .form-wrapper{
+          margin-top: 5px;
+          .form-submit{
+            color: $black;
+            font-size: 14px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+          .form-submit:hover{
+            background-color: #45A049;
+          }
+        }
+        div{
+          .order-total-line__subtotal{
+            display: none;
+          }
+        }
+        table{
+          thead{
+            tr{
+              > th{
+                text-transform: uppercase;
+              }
+            }
+          }
+          tbody{
+            .views-field-remove-button{
+              .form-submit{
+                color: #000000;
+                font-size: 12px;
+                padding: 5px 16px;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+              }
+              .form-submit:hover{
+                background-color: #a51b00;
+                color: #ffffff;
+              }
+            }
+            .views-field-edit-quantity{
+              .form-no-label{
+                input{
+                  width: 60px;
+                  padding: 5px;
+                  border: 1px solid #ccc;
+                  border-radius: 3px;
+                  transition: background-color 0.3s;
+                }
+                input:hover{
+                  background-color: #f0f0f0;
+                }
+                input::-webkit-inner-spin-button::-webkit-outer-spin-button {
+                  -webkit-appearance: none;
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

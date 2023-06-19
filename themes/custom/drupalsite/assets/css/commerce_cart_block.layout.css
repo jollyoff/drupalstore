@@ -1,0 +1,29 @@
+.cart-block--summary a {
+  display: block; }
+
+.cart-block--contents {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  z-index: 300; }
+
+.cart-block--contents__items {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  max-height: 300px; }
+
+.cart-block--contents__links a {
+  border: 1px solid #000000;
+  padding: 5px 10px;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.3s; }
+
+.cart-block--contents__links a:hover {
+  background-color: #e8e8e8; }
+
+.cart-block--contents.is-outside-horizontal {
+  right: 0; }
+
+.cart-block--contents__expanded {
+  overflow: visible; }

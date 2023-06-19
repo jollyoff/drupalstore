@@ -1,0 +1,56 @@
+@import "variables";
+
+.header {
+  .site-logo{
+    display: none;
+  }
+  background-color: $black;
+  &-wrap{
+    max-width: 114rem;
+    margin: 1px auto;
+    display: grid;
+    grid-gap: clamp(20px,2vw,50px);
+    grid-template-columns: auto 1fr auto;
+  }
+  .block-commerce-cart{
+    h2{
+      display: none;
+    }
+    .cart-block--summary__count{
+      color: $grey;
+    }
+  }
+}
+header{
+  padding: 2rem 1rem;
+  .block{
+    display: flex;
+    align-items: center;
+  }
+  .menu--main{
+    justify-content: flex-end;
+  }
+  nav{
+    .menu{
+      display: flex;
+      li {
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+    }
+    a{
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $grey;
+    }
+  }
+}
+.block-system-branding-block{
+  a{
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: $grey;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,125 @@
+@import "variables";
+
+.block-views-blocksimilar-products-block-1{
+  div{
+    .item-list{
+      ul{
+        width: 20%;
+        float: right;
+        list-style: none;
+      }
+    }
+  }
+}
+
+article{
+  .product-variations{
+    margin-left: 10px;
+    h3{
+      display: none;
+    }
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li{
+        display: inline-block;
+        a{
+          color: black;
+          transition: background-color 0.3s;
+        }
+        a:hover{
+          color: grey;
+        }
+      }
+      & > li:not(:last-child){
+        margin-right: 10px;
+      }
+    }
+  }
+  .product--rendered-attribute .form-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2px;
+  }
+  .product--rendered-attribute label.option {
+    display: inline-block;
+  }
+  .product--rendered-attribute .form-radio {
+    display: none;
+  }
+  .product--rendered-attribute__selected ~ label.option {
+    border: 1px solid;
+  }
+  > div{
+    margin-bottom: 10px;
+  }
+  .variations{
+    .js-form-item-purchased-entity-0-target-id{
+      .form-required{
+        display: none;
+      }
+    }
+    .js-form-item-quantity-0-value{
+      label{
+        display: none;
+      }
+    }
+  }
+  .commerce-price{
+    .field__label{
+      display: none;
+    }
+    .field__item{
+      font-size: 18px;
+    }
+  }
+  .product--variation-field--variation_price__3{
+    .field__item{
+      position: relative;
+      display: inline-block;
+      text-decoration: line-through;
+    }
+    .field__item:after{
+      content: "399 ₴";
+      position: absolute;
+      display: contents;
+      color: $red;
+    }
+  }
+  .field-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-with-summary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5px;
+  }
+  .field-category{
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    text-transform: capitalize;
+    a{
+      color: $black;
+      transition: background-color 0.3s;
+    }
+    a:hover{
+      color: #c4c4c4;
+    }
+    & > div:not(:last-child){
+      margin-right: 1rem;
+      position: relative;
+      &:before{
+        position: absolute;
+        content: ',';
+        right: -4px;
+        bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+@import "variables";
+
+.views-view-grid{
+  width: 80%;
+  float: left;
+}
+
+.block-views-exposed-filter-blockproducts-page-1{
+    margin-top: 1rem;
+    width: 15%;
+    float: right;
+  .clearfix{
+    .form-wrapper{
+      input{
+        float: right;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #e8e8e8;
+        color: #000000;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        margin-right: 5px;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      input:hover{
+        background-color: #c8c8c8;
+        transform: scale(1.05);
+      }
+    }
+    .js-form-item-sort-by{
+      label{
+        display: none;
+      }
+    }
+    > div{
+      .form-select{
+        background-color: #000000;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        float: right;
+        width: 230px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+      }
+      label{
+        display: none;
+      }
+    }
+    .js-form-item-filter{
+      .form-text{
+        width: 230px;
+        float: right;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        height: 30px;
+        position: relative;
+        background-image: url(../images/search-icon.png);
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 30px 30px;
+        padding-right: 40px;
+      }
+    }
+    > div{
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.view-products{
+  .views-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    > div{
+      .product-variations{
+        h3{
+          display: none;
+        }
+        ul{
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          li{
+            display: inline-block;
+          }
+          & > li:not(:last-child){
+            margin-right: 10px;
+          }
+        }
+      }
+      margin: 0.5rem;
+      width: 20%;
+      > article{
+        .commerce-order-item-add-to-cart-form{
+          .form-wrapper{
+            input{
+              width: 168px
+            }
+            .form-required{
+              display: none;
+            }
+          }
+          .field__items{
+            .form-required{
+              display: none;
+            }
+          }
+        }
+        .field__item{
+          font-size: 1.8rem;
+          color: #000000;
+          .form-wrapper{
+            .form-submit{
+              background-color: $grey;
+              color: $black;
+              border: none;
+              border-radius: 5px;
+              padding: 10px 20px;
+              font-size: 14px;
+              text-align: center;
+              text-decoration: none;
+              cursor: pointer;
+              transition: background-color 0.3s;
+            }
+            .form-submit:hover{
+              background-color: #d4d4d4;
+            }
+          }
+          a{
+            color: $black;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+
+.block-facet-blockcategory{
+  width: 10%;
+  float: right;
+  .facets-widget-checkbox{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+    ul{
+      list-style: none;
+      li{
+        text-decoration: none;
+        text-transform: uppercase;
+        .facets-checkbox{
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          width: 20px;
+          height: 20px;
+          border: 2px solid #000000;
+          border-radius: 4px;
+          outline: none;
+          cursor: pointer;
+        }
+        .facets-checkbox:checked{
+          background-color: #000000;
+        }
+        .facets-checkbox:before{
+          content: "\2713";
+          display: block;
+          width: 16px;
+          height: 16px;
+          line-height: 16px;
+          text-align: center;
+          color: #ffffff;
+          font-size: 12px;
+          margin: 2px;
+          border-radius: 2px;
+          background-color: #000000;
+          visibility: hidden;
+        }
+        .facets-checkbox:checked:before{
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

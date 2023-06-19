@@ -1,0 +1,5 @@
+services:
+  my_promotion_offer.promotion_offer.custom:
+    class: Drupal\my_promotion_offer\Plugin\Commerce\PromotionOffer\CustomPromotionOffer
+    tags:
+      - { name: commerce_promotion_offer, entity_type_id: commerce_order }

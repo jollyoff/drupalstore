@@ -1,0 +1,24 @@
+name: drupalsite
+type: theme
+description: 'Drupal administration theme with modern minimalist design.'
+core_version_requirement: ^8.8 || ^9
+base theme: false
+
+libraries:
+  - drupalsite/global
+  - drupalsite/page-front
+
+
+regions:
+  header: 'Header'
+  breadcrumb: Breadcrumb
+  highLighted: Highlighted
+  help: Help
+  content: Content
+  footer: 'Footer'
+
+libraries-override:
+  commerce_cart/cart_block:
+    css:
+      layout:
+        css/commerce_cart.layout.css: false
