@@ -10,11 +10,9 @@ module:
   version: 1.0
   schema_version: 8000
 
-# Включение файлов
 files:
   - 'src/Plugin/Commerce/PromotionOffer/CustomPromotionOffer.php'
 
-# Регистрация плагина
 commerce_plugin:
   promotion_offer:
     plugins:

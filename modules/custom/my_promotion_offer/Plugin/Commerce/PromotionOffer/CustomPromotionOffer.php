@@ -2,10 +2,9 @@
 
 namespace Drupal\my_promotion_offer\Plugin\Commerce\PromotionOffer;
 
-use Drupal\commerce_promotion\Plugin\Commerce\PromotionOffer\OrderPromotionOfferBase;
-use Drupal\commerce_order\Entity\OrderInterface;
+use Drupal\commerce_order\Adjustment;
+use Drupal\commerce_promotion\Plugin\Commerce\PromotionOffer\OrderItemPromotionOfferBase;
 use Drupal\commerce_promotion\Entity\PromotionInterface;
-use Drupal\commerce_promotion\Plugin\Commerce\PromotionOffer\PromotionOfferInterface;
 use Drupal\Core\Entity\EntityInterface;
 
 /**
@@ -17,25 +16,39 @@ use Drupal\Core\Entity\EntityInterface;
  *   entity_type = "commerce_order",
  * )
  */
-class CustomPromotionOffer extends OrderPromotionOfferBase implements PromotionOfferInterface {
+class CustomPromotionOffer extends OrderItemPromotionOfferBase {
 
   /**
    * {@inheritdoc}
    */
   public function apply(EntityInterface $entity, PromotionInterface $promotion) {
-    if ($entity instanceof OrderInterface) {
-      // Применить скидку к заказу.
-      $discountAmount = 10; // Сумма скидки в валюте заказа.
-      $orderTotalSummary = $entity->get('order_total')->first();
-      $orderTotalSummary->set('total_price', $orderTotalSummary->get('total_price')->subtract($discountAmount));
+    $this->assertEntity($entity);
+    /** @var \Drupal\commerce_order\Entity\OrderItemInterface $order_item */
+    $order_item = $entity;
+    $percentage = 0.1; // 10% discount
 
-      // Сохранить изменения в заказе.
-      $entity->save();
+    $unit_price = $order_item->getUnitPrice();
+    $amount = $unit_price->multiply($percentage);
+    $amount = $this->rounder->round($amount);
 
-      // Добавить сообщение о применении скидки.
-      $this->messenger()->addStatus($this->t('Discount applied: @amount', ['@amount' => $discountAmount]));
+    $new_unit_price = $unit_price->subtract($amount);
+    $order_item->setUnitPrice($new_unit_price);
+    $adjustment_amount = $amount->multiply($order_item->getQuantity());
+
+    $adjustment_amount = $this->rounder->round($adjustment_amount);
+
+    if ($adjustment_amount->isZero()) {
+      return;
     }
+
+    $order_item->addAdjustment(new Adjustment([
+      'type' => 'promotion',
+      'label' => $promotion->getDisplayName() ?: $this->t('Discount'),
+      'amount' => $adjustment_amount->multiply('-1'),
+      'percentage' => $percentage,
+      'source_id' => $promotion->id(),
+      'included' => FALSE,
+    ]));
   }
 
 }
-

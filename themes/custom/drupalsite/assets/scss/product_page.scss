@@ -13,6 +13,15 @@
 }
 
 article{
+  .form-number{
+    user-select: none;
+    position: relative;
+    text-align: left;
+    padding: 0;
+    width: 140px;
+    border: 1px solid #ddd;
+    display: inline-block;
+  }
   .product-variations{
     margin-left: 10px;
     h3{

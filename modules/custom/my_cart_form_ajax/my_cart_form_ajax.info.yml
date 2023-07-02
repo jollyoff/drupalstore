@@ -1,0 +1,5 @@
+name: My Cart Form Ajax
+type: module
+description: Adding ajax scripts for cart form.
+core: 8.x
+package: Custom
